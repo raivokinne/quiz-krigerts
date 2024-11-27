@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Default light theme colors */
+    --background: 0 0% 10%; /* Dark background */
+    --foreground: 240 10% 90%; /* Light text */
+    --card: 0 0% 15%; /* Darker card background */
+    --card-foreground: 240 10% 90%; /* Light text for card */
+    --popover: 0 0% 10%; /* Darker popover background */
+    --popover-foreground: 240 10% 90%; /* Light text for popover */
+
+    /* Primary and secondary colors (Yellow and Black) */
+    --primary: 39 100% 50%; /* Yellow */
+    --primary-foreground: 0 0% 98%; /* Light text for yellow */
+    --secondary: 240 0% 10%; /* Black */
+    --secondary-foreground: 240 10% 90%; /* Light text for black */
+
+    /* Muted and accent colors */
+    --muted: 240 5% 30%; /* Darker muted background */
+    --muted-foreground: 240 10% 80%; /* Lighter text for muted */
+    --accent: 39 100% 50%; /* Accent (Yellow) */
+    --accent-foreground: 0 0% 98%; /* Light text for accent */
+
+    /* Destructive colors */
+    --destructive: 0 100% 50%; /* Red for destructive actions */
+    --destructive-foreground: 0 0% 98%; /* Light text for destructive actions */
+
+    /* Borders and input fields */
+    --border: 240 10% 30%; /* Dark border */
+    --input: 240 10% 30%; /* Dark input background */
+    --ring: 39 100% 50%; /* Ring color matching yellow */
+
+    /* Chart colors */
+    --chart-1: 39 100% 50%; /* Yellow */
+    --chart-2: 240 10% 50%; /* Blue for charts */
+    --chart-3: 0 100% 50%; /* Red for charts */
+    --chart-4: 160 100% 50%; /* Green for charts */
+    --chart-5: 320 100% 50%; /* Pink for charts */
+
+    --radius: 0.5rem; /* Rounded corners */
+  }
+
+  .dark {
+    /* Dark theme colors */
+    --background: 240 10% 3%; /* Very dark background for dark mode */
+    --foreground: 0 0% 98%; /* Light text in dark mode */
+    --card: 240 10% 10%; /* Dark card background */
+    --card-foreground: 0 0% 98%; /* Light text for card in dark mode */
+    --popover: 240 10% 3%; /* Dark popover background */
+    --popover-foreground: 0 0% 98%; /* Light text for popover in dark mode */
+
+    /* Primary and secondary colors (Yellow and Black for dark mode) */
+    --primary: 39 100% 50%; /* Yellow */
+    --primary-foreground: 0 0% 98%; /* Light text on yellow */
+    --secondary: 0 0% 10%; /* Black in dark mode */
+    --secondary-foreground: 240 10% 90%; /* Light text for black in dark mode */
+
+    /* Muted and accent colors */
+    --muted: 240 5% 15%; /* Darker muted background */
+    --muted-foreground: 240 10% 80%; /* Lighter text for muted in dark mode */
+    --accent: 39 100% 50%; /* Accent Yellow */
+    --accent-foreground: 0 0% 98%; /* Light text on accent */
+
+    /* Destructive colors (same for dark mode) */
+    --destructive: 0 100% 50%; /* Red */
+    --destructive-foreground: 0 0% 98%; /* Light text for destructive */
+
+    /* Borders and input fields */
+    --border: 240 10% 20%; /* Dark border */
+    --input: 240 10% 20%; /* Dark input background */
+    --ring: 39 100% 50%; /* Yellow ring for focus */
+
+    /* Chart colors (same as light theme) */
+    --chart-1: 39 100% 50%; /* Yellow */
+    --chart-2: 240 10% 50%; /* Blue */
+    --chart-3: 0 100% 50%; /* Red */
+    --chart-4: 160 100% 50%; /* Green */
+    --chart-5: 320 100% 50%; /* Pink */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
