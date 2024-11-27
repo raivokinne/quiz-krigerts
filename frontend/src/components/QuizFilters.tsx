@@ -29,7 +29,7 @@ export function QuizFilters({
         placeholder="Search quizzes..."
         value={searchTerm}
         onChange={(e) => onSearchChange(e.target.value)}
-        className="w-full p-2 border rounded-md"
+        className="w-full p-2 border bg-black rounded-md"
       />
       <Select value={category} onValueChange={onCategoryChange}>
         <SelectTrigger>
