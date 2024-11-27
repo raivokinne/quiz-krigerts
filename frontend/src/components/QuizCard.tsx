@@ -12,9 +12,10 @@ import { Button } from "@/components/ui/button";
 
 interface QuizCardProps {
   quiz: Quiz;
+  user: any;
 }
 
-export function QuizCard({ quiz }: QuizCardProps) {
+export function QuizCard({ quiz, user }: QuizCardProps) {
   return (
     <Card className="hover:shadow-lg transition-shadow bg-secondary/20">
       <CardHeader>
@@ -25,7 +26,7 @@ export function QuizCard({ quiz }: QuizCardProps) {
       </CardHeader>
       <CardContent>
         <div className="flex justify-between items-center">
-          <span className="text-muted-foreground">By {quiz.author}</span>
+          <span className="text-muted-foreground">By {user.name}</span>
           <Link to={`/quiz/${quiz.id}`}>
             <Button size="sm" className="bg-orange-600 hover:bg-orange-700">
               <PlayCircle className="mr-2 h-4 w-4" /> Start Quiz

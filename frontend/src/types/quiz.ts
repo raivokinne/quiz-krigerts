@@ -20,4 +20,12 @@ export interface Quiz {
   difficulty: QuizDifficulty;
   author: string;
   questions: QuizQuestion[];
+  user: User;
+}
+
+export interface User {
+  id: number;
+  name: string;
+  email: string;
+  password: string;
 }
